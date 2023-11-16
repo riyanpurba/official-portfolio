@@ -8,5 +8,4 @@ out/
 Dockerfile
 docker-compose.yml
 node_modules/
-nginx/
 README.md
