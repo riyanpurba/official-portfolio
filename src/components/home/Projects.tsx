@@ -25,10 +25,10 @@ const Projects: FC<ProjectsProps> = () => {
         <p className="hidden text-white text-base w-full md:w-6/12 text-center mx-auto py-4 select-none">
           With approximately five years of experience, I have successfully developed web applications that contribute to the growth and success of various companies.
         </p>
-        <div className='relative'>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-3 mt-10">
+        <div className='relative z-10'>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-3 mt-10">
             {project.map((item, index) => (
-              <div key={index} className="relative flex flex-col items-center justify-center overflow-hidden">
+              <div key={index} className="relative border border-white rounded-xl bg-black overflow-hidden flex flex-col md:flex-row items-start justify-between">
                 <CardProjects {...item} onClick={() => handleGetDetail(item.slug)} />
               </div>
             ))}
