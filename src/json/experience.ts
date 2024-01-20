@@ -10,7 +10,7 @@ export const experience: Experience[] = [
   {
     company: "PT. ICE Messenger Indonesia",
     position: "Senior FrontEnd Developer",
-    period: "Jan 2022 - Present",
+    period: "Jan 2022 - November 2023",
     status: "Permanent",
     description: [
       "Responsible for the development and improvement of the IndoChat website, ChatNews portal, Qtoko web application, and CodeCert platform.",
