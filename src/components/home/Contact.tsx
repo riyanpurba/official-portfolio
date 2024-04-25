@@ -6,9 +6,9 @@ const Contact = () => {
       <div className="container">
         <div className="flex flex-col items-center gap-6">
           <h2 className="text-center text-4xl font-bold uppercase tracking-widest text-yellow/90 group-hover:text-yellow group-focus-visible:text-yellow">Contact</h2>
-          <span>Want to hire me or chat with me?</span>
+          {/* <span>Want to hire me or chat with me?</span>
           <span>Then write me an email at <a href="mailto:riyan.purba00@gmail.com" className="font-bold text-yellow underline">riyan.purba00@gmail.com</a></span>
-          <span className="font-bold">Otherwise</span>
+          <span className="font-bold">Otherwise</span> */}
           <span>Let`s be friend!</span>
           <div className="flex items-center gap-4">
             <SocialMedia childClass="flex flex-row items-center justify-between gap-10" />
