@@ -24,6 +24,18 @@
   box-sizing: border-box
 }
 
+*::-webkit-scrollbar {
+  width: 0;
+  height: 4px;
+  background: transparent
+}
+
+*::-webkit-scrollbar-thumb {
+  width: 0;
+  background: #7e7e7e;
+  height: 0
+}
+
 #__next {
   @apply relative min-h-full;
 }
