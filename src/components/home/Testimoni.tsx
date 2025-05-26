@@ -22,7 +22,7 @@ const Testimoni = () => {
                     <Slider {...settings}>
                         {testimonials.map(({ name, role, message }, idx) => (
                         <div key={idx} className="p-6 bg-white border rounded-xl shadow">
-                            <p className="text-gray-700 italic mb-6">"{message}"</p>
+                            <p className="text-gray-700 italic mb-6"><blockquote className="font-semibold text-black text-lg">{message}</blockquote></p>
                             <div className="flex items-center space-x-4">
                             <div className="bg-black text-yellow rounded-full w-12 h-12 flex items-center justify-center font-bold uppercase">
                                 {name
