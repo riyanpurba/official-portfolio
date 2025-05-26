@@ -14,8 +14,8 @@ const About = () => {
             <div className="w-full text-center md:text-left md:w-8/12 mt-10 md:mt-0">
               <h3 className="text-sm font-inter font-normal text-black/70 dark:text-white/70">Get to know me</h3>
               <h2 className="text-2xl font-oswald font-semibold text-yellow">About Me</h2>
-              <p className="py-5 text-black dark:text-white select-none">I am an active undergraduate student majoring in Computer Engineering at Budi Luhur University, with over 5 years of work experience in software development. I am enthusiastic about technology and ready for new challenges. With the combination of my education and experience, I am confident that I can make a significant contribution to the ever-evolving world of information technology.</p>
-              <a href="/Resume_Riyan_Purba.pdf" download className='h-[50px] px-[30px] leading-[47px] font-medium font-oswald text-base border border-black dark:border-yellow rounded-[50px] text-black dark:text-white hover:bg-yellow hover:text-black dark:hover:text-black uppercase inline-block hover:animate-bounce'>Download CV</a>
+              <p className="py-5 text-black dark:text-white select-none">Experienced Frontend Developer with over 5 years in building scalable and user-centric web applications using ReactJS, NuxtJS, and Laravel. Adept at translating UI/UX designs into clean, high-performance code. Proven track record of deploying production-ready solutions using Docker and VPS environments. Currently pursuing a degree in Computer Engineering at Budi Luhur University and eager to contribute to innovative projects in fast-paced development teams.</p>
+              <a href="/CV_Riyan_Purba.pdf" target="_blank" download className='h-[50px] px-[30px] leading-[47px] font-medium font-oswald text-base border border-black dark:border-yellow rounded-[50px] text-black dark:text-white hover:bg-yellow hover:text-black dark:hover:text-black uppercase inline-block hover:animate-bounce'>Download CV</a>
             </div>
           </div>
         </div>

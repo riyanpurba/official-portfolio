@@ -6,6 +6,9 @@ import { AppConfig } from '@/utils/AppConfig';
 import GoogleAnalytics from '@/utils/GoogleAnalytics';
 import { useEffect } from 'react';
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     TagManager.initialize({ gtmId: AppConfig.GTM });

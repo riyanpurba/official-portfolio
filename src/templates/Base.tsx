@@ -7,6 +7,8 @@ import { About } from '@/components/home/About';
 import { Technology } from '@/components/home/Technology';
 import { Experience } from '@/components/home/Experience';
 import { Projects } from '@/components/home/Projects';
+import { RateCard } from '@/components/home/RateCard';
+import { Testimoni } from '@/components/home/Testimoni';
 import { Footer } from '@/templates/Footer';
 import { Contact } from '@/components/home/Contact';
 import { Parallax } from '@/components/home/Parallax';
@@ -21,6 +23,8 @@ const Base = () => (
       <Technology />
       <Experience />
       <Projects />
+      <RateCard />
+      <Testimoni />
       <Parallax />
       <Contact />
     </main>

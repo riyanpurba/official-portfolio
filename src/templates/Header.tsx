@@ -12,7 +12,7 @@ const Header = () => {
             <Image src={AppConfig.image} alt={AppConfig.author} title={AppConfig.author} width={60} height={60} />
           </Link>
           <div className="flex md:order-2">
-            <Link href="mailto:riyan.purba00@gmail.com" className="text-black bg-yellow hover:bg-yellow focus:ring-4 focus:outline-none focus:ring-yellow font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0">Hire Me!</Link>
+            <Link href="https://wa.me/6282137527284?text=Halo%20Riyan%2C%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20Anda." target="_blank" className="text-black bg-yellow hover:bg-yellow focus:ring-4 focus:outline-none focus:ring-yellow font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0">Hire Me!</Link>
           </div>
           <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
@@ -28,9 +28,9 @@ const Header = () => {
               <li className="mx-auto">
                 <Link href="/#project" className="block py-2 pl-3 pr-4 text-white capitalize rounded md:p-0">Projects</Link>
               </li>
-              <li className="mx-auto">
+              {/* <li className="mx-auto">
                 <Link href="https://blog-riyanpurba.vercel.app/" className="block py-2 pl-3 pr-4 text-white capitalize rounded md:p-0" target="_blank">Blogs</Link>
-              </li>
+              </li> */}
               <li className="mx-auto">
                 <Link href="/#contact" className="block py-2 pl-3 pr-4 text-white capitalize rounded md:p-0">Contact</Link>
               </li>

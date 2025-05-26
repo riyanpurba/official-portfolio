@@ -7,11 +7,11 @@ const Hero = () => {
       <div className="py-20 2xl:py-38 xl:py-38 lg:py-38 md:py-40 flex items-center">
         <div className="container">
             <div className="flex items-center flex-col 2xl:flex-row xl:flex-row lg:flex-row md:flex-row gap-3">
-              <div className="relative mx-auto flex flex-col items-center justify-center w-full">
+              <div className="relative mx-auto flex flex-col items-center justify-center w-full text-center">
                 <h1 className="relative text-4xl font-semibold text-center text-white select-none font-oswald">Hello, I`m<br /><strong className="text-white magic font-inter">Riyan Purba</strong></h1>
                 <TextTypingAnimation key="line-0" className="text-2xl font-medium text-left font-oswald leading-10 text-yellow" texts={["Front End Developer", "Freelancer"]} />
-                <p className="py-5 text-lg font-light text-center text-white font-inter opacity-90 select-none">I am a senior frontend developer with 5+ years of experience in the industry.<br />I am passionate about creating high-quality web applications that are user-friendly and efficient.</p>
-                <a href="mailto:riyan.purba00@gmail.com" className='h-[50px] px-[30px] leading-[47px] font-semibold font-oswald text-base text-white border border-yellow rounded-[50px] hover:bg-yellow hover:text-black uppercase inline-block'>Contact Me</a>
+                <p className="py-5 text-lg font-light text-center text-white font-inter opacity-90 select-none">Saya Riyan, Frontend Developer. Spesialis bikin website landing page, company profile, dan portal berita mulai dari 500 ribu.</p>
+                <a href="https://wa.me/6282137527284?text=Halo%20Riyan%2C%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20Anda." target='_blank' className='h-[50px] px-[30px] leading-[47px] font-semibold font-oswald text-base text-white border border-yellow rounded-[50px] hover:bg-yellow hover:text-black uppercase inline-block'>Contact Me</a>
               </div>
           </div>
         </div>
