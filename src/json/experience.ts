@@ -8,9 +8,22 @@ interface Experience {
 
 export const experience: Experience[] = [
   {
+    company: "PT. Xing Yatu Indonesia",
+    position: "FrontEnd Developer",
+    period: "Juni 2024 - Maret 2025",
+    status: "Project Base",
+    description: [
+      "Collaborated with the UI/UX team to translate business requirements into intuitive and responsive user interfaces.",
+      "Developed the company profile website for PT. Xing Yatu Indonesia using React.js and TypeScript, focusing on performance and scalability.",
+      "Transformed Figma designs into clean, responsive layouts using Tailwind CSS.",
+      "Deployed the application to a VPS using Docker, ensuring a stable and maintainable production environment.",
+      "Set up and configured the VPS server from scratch, including dependency installation and performance optimization.",
+    ],
+  },
+  {
     company: "PT. ICE Messenger Indonesia",
     position: "Senior FrontEnd Developer",
-    period: "Jan 2022 - November 2023",
+    period: "Januari 2022 - November 2023",
     status: "Permanent",
     description: [
       "Responsible for the development and improvement of the IndoChat website, ChatNews portal, Qtoko web application, and CodeCert platform.",

@@ -62,5 +62,9 @@ export const tech = [
   {
     title: "Figma",
     image: '/icon/figma.svg'
+  },
+  {
+    title: "Docker",
+    image: '/icon/docker.svg'
   }
 ];

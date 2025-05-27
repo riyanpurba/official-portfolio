@@ -32,7 +32,7 @@ const Header = () => {
                 <Link href="https://blog-riyanpurba.vercel.app/" className="block py-2 pl-3 pr-4 text-white capitalize rounded md:p-0" target="_blank">Blogs</Link>
               </li> */}
               <li className="mx-auto">
-                <Link href="/#contact" className="block py-2 pl-3 pr-4 text-white capitalize rounded md:p-0">Contact</Link>
+                <Link href="/contact" className="block py-2 pl-3 pr-4 text-white capitalize rounded md:p-0">Contact</Link>
               </li>
             </ul>
           </div>

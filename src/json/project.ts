@@ -14,8 +14,38 @@ export interface Project {
 }
 
 export const project: Project[] = [
+  // {
+  //   id: 1,
+  //   title: "Xing Yatu Indonesia",
+  //   slug: "xing-yatu-indonesia",
+  //   description: "Yatu.co.id is the official website of PT. Xing Yatu Indonesia, showcasing the company's profile, services, and leading products in the powder coating industry with a modern, responsive, and user-friendly design.",
+  //   image: "/mockup/codecert_thumb.jpg",
+  //   url: 'https://yatu.co.id/id',
+  //   tech: [
+  //     {
+  //       name: "ReactJS",
+  //       slug: "react"
+  //     },
+  //     {
+  //       name: "TypeScript",
+  //       slug: "typescript"
+  //     },
+  //     {
+  //       name: "Tailwindcss",
+  //       slug: "tailwind"
+  //     },
+  //     {
+  //       name: "Docker",
+  //       slug: "docker"
+  //     },
+  //     {
+  //       name: "Figma",
+  //       slug: "figma"
+  //     },
+  //   ]
+  // },
   {
-    id: 1,
+    id: 2,
     title: "CodeCert",
     slug: "codecert",
     description: "A digital system that enables certificate information to be stored in a two-dimensional code and easily verified.",
@@ -41,7 +71,7 @@ export const project: Project[] = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: "ChatNews",
     slug: "chatnews",
     description: "Developed the news portal www.chatnews.id which became one of the features in the Indochat messenger application. I worked with the UI/UX design team to create a user-friendly website.",
@@ -67,7 +97,7 @@ export const project: Project[] = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "QToko - Reward Card",
     slug: "qtoko-reward-card",
     description: "The details of the rewards that customers will receive can be customized by merchants. Counting down from the total number of points, the minimum transaction amount required to earn points, and the terms and conditions of the reward.",
@@ -93,7 +123,7 @@ export const project: Project[] = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: "IndoChat",
     slug: "indochat",
     description: "working with the UI/UX team to develop the official IndoChat website and contributing a number of ideas to their work. Additionally, add multiple animations and dual language functionality to the website to improve its aesthetic, responsiveness, and usability.",
@@ -119,7 +149,7 @@ export const project: Project[] = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     title: "Cumicumi",
     slug: "cumicumi",
     description: "Creating the CMS portal, creating the portal website, creating the UI/UX design for the cumicumi portal, and creating the database. and creating a user-friendly, responsive portal website",
@@ -153,7 +183,7 @@ export const project: Project[] = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     title: "Optoloft",
     slug: "optoloft",
     description: "Optoloft is the Best Transceivers & Patch Cables Connectivity Guide Company, to fulfill your important needs of data wiring infrastructures.",
@@ -179,7 +209,7 @@ export const project: Project[] = [
     ]
   },
   {
-    id: 7,
+    id: 8,
     title: "ZeeWork",
     slug: "zeework",
     description: "Zeework provide creative & productive coworking space in Jakarta & virtual office address, we also extend our service to legal, tax, finance and branding solution for your business",
@@ -205,7 +235,7 @@ export const project: Project[] = [
     ]
   },
   {
-    id: 8,
+    id: 9,
     title: "The Ayoma",
     slug: "the-ayoma",
     description: "The Ayoma is a residential with an apartment concept in Serpong developed by PT PP Properti, Tbk. The Ayoma will be a hidden & peaceful housing with an oasis garden inside which located near the the city center.",
@@ -231,7 +261,7 @@ export const project: Project[] = [
     ]
   },
   {
-    id: 9,
+    id: 10,
     title: "DomaDona",
     slug: "domadona",
     description: "Doma Dona Coffee is the best Coffee Shop in South Jakarta, we committed to give the best experience to enjoy Indonesian unique coffee beans that we roasted ourself.",
@@ -257,7 +287,7 @@ export const project: Project[] = [
     ]
   },
   {
-    id: 10,
+    id: 11,
     title: "Grand Slipi Tower",
     slug: "grand-slipi-tower",
     description: "Grand Slipi Tower is an office building with an exclusive and modern concept in the Palmerah area, West Jakarta.",
