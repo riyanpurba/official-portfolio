@@ -9,7 +9,7 @@ import { Experience } from '@/components/home/Experience';
 import { Projects } from '@/components/home/Projects';
 import { RateCard } from '@/components/home/RateCard';
 import { Testimoni } from '@/components/home/Testimoni';
-import { Footer } from '@/templates/Footer';
+import { Footer } from '@/templates/Footer'
 import { Contact } from '@/components/home/Contact';
 import { Parallax } from '@/components/home/Parallax';
 

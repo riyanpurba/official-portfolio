@@ -87,7 +87,7 @@ const Form = () => {
         </div>
         <button
           id="cta_submit"
-          className="cta-btn-form bg-primary text-white text-xl font-roboto font-semibold px-28 py-5 mt-4 !mx-auto rounded-[60px]"
+          className="w-auto mt-6 px-8 py-2 text-center text-white font-semibold bg-gray-500 hover:bg-gray-800 transition rounded"
           disabled={loading}
         >
           {loading ? 'Loading...' : 'Kirim' }

@@ -6,7 +6,7 @@ import { AppConfig } from "@/utils/AppConfig";
 
 const Footer = () => {
   return (
-    <footer className="absolute bottom-0 right-0 left-0 w-full h-16 bg-black p-5 border-t">
+    <footer className="relative bottom-0 right-0 left-0 w-full h-16 bg-black p-5 border-t">
       <div className="container">
         <div className="isolate h-full flex flex-col items-center justify-center">
           <div className="w-full flex flex-col items-center justify-center">
