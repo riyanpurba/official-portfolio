@@ -1,11 +1,12 @@
 import { Reveal, Section } from '@/components/ui/Reveal';
 
 const faqs = [
-  ['Berapa biaya pembuatan website?', 'Landing page mulai Rp900 ribu, company profile Rp1,8–3 juta, dan aplikasi web custom mulai Rp4 juta. Harga final menyesuaikan kebutuhan dan scope proyek.'],
-  ['Bagaimana sistem pembayarannya?', 'DP 50% sebelum pengerjaan, 30% setelah progres utama disetujui, dan 20% sebelum deployment atau serah terima.'],
-  ['Berapa kali saya boleh revisi?', 'Maksimal dua kali revisi minor sesuai kesepakatan tertulis. Perubahan scope dihitung sebagai penawaran terpisah.'],
-  ['Apakah sudah termasuk domain dan hosting?', 'Belum. Domain, hosting, dan layanan pihak ketiga dihitung terpisah, dan saya bisa membantu pengaturannya.'],
-  ['Apakah ada layanan perawatan website?', 'Ada, Rp300–500 ribu per bulan: perbaikan bug terbatas, update konten minor, update dependency, dan monitoring dasar.'],
+  ['Apa hubungan Riyan Purba dan MIQVERO?', 'Situs ini adalah portfolio pribadi saya: pengalaman, kemampuan teknis, dan proyek. MIQVERO adalah studio web development yang saya pimpin, tempat calon klien melihat layanan, harga awal, dan mengirim brief proyek.'],
+  ['Bagaimana cara memesan website?', 'Kirim brief lewat MIQVERO. Konsultasi awal gratis dan saya balas dalam satu hari kerja.'],
+  ['Berapa biaya pembuatan website?', 'Daftar layanan, harga awal, dan sistem pembayaran lengkap ada di MIQVERO. Harga final mengikuti kebutuhan dan scope proyek.'],
+  ['Apakah ada layanan perawatan website?', 'Ada, lewat paket perawatan bulanan di MIQVERO: perbaikan bug terbatas, update konten minor, update dependency, dan monitoring dasar.'],
+  ['Teknologi apa yang Anda kuasai?', 'Saya terutama memakai React, TypeScript, Next.js, Laravel, Tailwind CSS, dan REST API, dengan deployment memakai Docker dan VPS.'],
+  ['Apakah terbuka untuk kolaborasi atau peluang kerja?', 'Terbuka. Hubungi saya lewat form kontak atau WhatsApp di bawah.'],
 ];
 
 const jsonLd = {

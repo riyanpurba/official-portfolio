@@ -5,8 +5,8 @@ import { experience } from '@/json/experience';
 import { tech } from '@/json/tech';
 
 const groups = [
-  ['Frontend', 'Antarmuka cepat, responsif, dan rapi di semua layar.', ['HTML5', 'CSS3', 'Javascript', 'Typescript', 'SASS', 'ReactJS', 'NuxtJS', 'Bootstrap', 'TailwindCSS', 'Vite']],
-  ['Backend', 'API dan logika bisnis.', ['PHP', 'Laravel', 'CodeIgniter']],
+  ['Frontend', 'Antarmuka cepat, responsif, dan rapi di semua layar.', ['ReactJS', 'Typescript', 'Next.js', 'TailwindCSS', 'Javascript', 'NuxtJS', 'HTML5', 'CSS3', 'SASS', 'Bootstrap', 'Vite']],
+  ['Backend & API', 'REST API dan logika bisnis.', ['Laravel', 'REST API', 'PHP', 'CodeIgniter']],
   ['Database', 'Penyimpanan data yang terstruktur.', ['MySQL', 'PostgreSQL']],
   ['Desain & DevOps', 'Dari desain Figma sampai deployment di VPS.', ['Figma', 'Docker']],
 ] as const;

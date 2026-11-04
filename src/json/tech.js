@@ -24,6 +24,14 @@ export const tech = [
     image: '/icon/sass.svg'
   },
   {
+    title: "Next.js",
+    image: '/icon/nextjs.svg'
+  },
+  {
+    title: "REST API",
+    image: '/icon/rest-api.svg'
+  },
+  {
     title: "Laravel",
     image: '/icon/laravel.svg'
   },

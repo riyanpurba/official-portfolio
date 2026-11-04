@@ -9,7 +9,7 @@ import { SocialMedia } from '@/templates/SocialMedia';
 
 const links = [
   ['Tentang', '#about'],
-  ['Layanan', '#layanan'],
+  ['MIQVERO', '#layanan'],
   ['Proyek', '#proyek'],
   ['Pengalaman', '#pengalaman'],
   ['Studi Kasus', '#studi-kasus'],
@@ -36,6 +36,7 @@ const Header = () => {
         <div className="wrap flex h-16 items-center justify-between">
           <a href="#top" className="flex items-center gap-3" aria-label="Riyan Purba, kembali ke atas">
             <img src={AppConfig.image} alt="" width={36} height={36} className="rounded-full" />
+            {/* <span className="font-display text-xl">Riyan Purba</span> */}
           </a>
           {/* <nav aria-label="Navigasi utama" className="hidden items-center gap-7 text-sm xl:flex">
             {links.filter(([, h]) => ['#about', '#layanan', '#proyek', '#pengalaman', '#kontak'].includes(h)).map(([label, href]) => (
@@ -44,7 +45,7 @@ const Header = () => {
           </nav> */}
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            {/* <a href={waLink()} target="_blank" rel="noopener noreferrer" className="btn btn-primary hidden sm:inline-flex">Konsultasi</a> */}
+            <a href={AppConfig.studio.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary hidden sm:inline-flex">Pesan via {AppConfig.studio.name}</a>
             <button type="button" data-cursor="Menu" onClick={() => setOpen(true)} aria-expanded={open} aria-controls="menu" className="btn btn-ghost gap-2">
               Menu
               <span aria-hidden="true" className="flex flex-col gap-[3px]"><i className="block h-px w-4 bg-current" /><i className="block h-px w-3 bg-current" /></span>
@@ -82,7 +83,7 @@ const Header = () => {
                 </ul>
               </nav>
               <div className="flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6 text-sm text-muted">
-                <a href={waLink()} target="_blank" rel="noopener noreferrer" className="hover:text-accent">WhatsApp: +62 813-8507-9843</a>
+                <a href={waLink()} target="_blank" rel="noopener noreferrer" className="hover:text-accent">WhatsApp: +62 821-3752-7284</a>
                 <SocialMedia childClass="flex gap-5" />
               </div>
             </div>

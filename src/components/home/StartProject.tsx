@@ -1,6 +1,7 @@
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 
 import { Reveal } from '@/components/ui/Reveal';
+import { AppConfig } from '@/utils/AppConfig';
 import { waLink } from '@/utils/whatsapp';
 
 const StartProject = () => (
@@ -9,10 +10,13 @@ const StartProject = () => (
       <Reveal className="relative overflow-hidden rounded-[2.5rem] border border-line bg-surface px-6 py-16 text-center md:px-16 md:py-24">
         <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/20 blur-3xl" />
         <h2 id="start-title" className="relative font-display text-[clamp(2.4rem,8vw,6rem)] leading-[1]">Ayo mulai proyek Anda</h2>
-        <p className="relative mx-auto mt-5 max-w-md text-muted">Konsultasi awal gratis. Ceritakan kebutuhan Anda dan saya balas dalam satu hari kerja.</p>
-        <a href={waLink()} target="_blank" rel="noopener noreferrer" data-cursor="Chat" className="btn btn-primary relative mt-8 gap-2">
-          Mulai sekarang <ArrowUpRightIcon aria-hidden="true" className="h-4 w-4" />
-        </a>
+        <p className="relative mx-auto mt-5 max-w-md text-muted">Konsultasi awal gratis. Kirim brief lewat MIQVERO, studio web saya, dan saya balas dalam satu hari kerja.</p>
+        <div className="relative mt-8 flex flex-wrap justify-center gap-3">
+          <a href={AppConfig.studio.url} target="_blank" rel="noopener noreferrer" data-cursor="Buka" className="btn btn-primary gap-2">
+            Mulai di {AppConfig.studio.name} <ArrowUpRightIcon aria-hidden="true" className="h-4 w-4" />
+          </a>
+          <a href={waLink()} target="_blank" rel="noopener noreferrer" data-cursor="Chat" className="btn btn-ghost">Chat WhatsApp</a>
+        </div>
       </Reveal>
     </div>
   </section>

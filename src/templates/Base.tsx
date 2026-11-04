@@ -9,7 +9,7 @@ import { Testimonials } from '@/components/home/Testimonials';
 import { StartProject } from '@/components/home/StartProject';
 import { Projects } from '@/components/home/Projects';
 import { CaseStudies } from '@/components/home/CaseStudies';
-import { RateCard } from '@/components/home/RateCard';
+import { Studio } from '@/components/home/Studio';
 import { Faq } from '@/components/home/Faq';
 import { Contact } from '@/components/home/Contact';
 
@@ -23,7 +23,7 @@ const Base = () => (
     <main id="konten">
       <Hero />
       <About />
-      <RateCard />
+      <Studio />
       <Projects />
       <Clients />
       <Skills />

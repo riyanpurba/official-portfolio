@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import * as emailjs from 'emailjs-com';
 
 import { Reveal, Section } from '@/components/ui/Reveal';
+import { AppConfig } from '@/utils/AppConfig';
 import { SocialMedia } from '@/templates/SocialMedia';
 import { waLink } from '@/utils/whatsapp';
 
@@ -24,15 +25,15 @@ const Contact = () => {
   const sendWhatsApp = () => {
     if (!formRef.current) return;
     const d = new FormData(formRef.current);
-    window.open(waLink(`Halo Riyan, saya ${d.get('nama') || ''}.\nSaya tertarik dengan: ${d.get('layanan')}.\n\n${d.get('message') || ''}`), '_blank', 'noopener');
+    window.open(waLink(`Halo Riyan, saya ${d.get('nama') || ''}.\nTopik: ${d.get('layanan')}.\n\n${d.get('message') || ''}`), '_blank', 'noopener');
   };
 
   return (
-    <Section id="kontak" eyebrow="Kontak" title="Ceritakan kebutuhan Anda" sub="Konsultasi awal gratis. Biasanya saya membalas dalam satu hari kerja.">
+    <Section id="kontak" eyebrow="Kontak" title="Hubungi saya" sub="Untuk kolaborasi, peluang kerja, atau pertanyaan teknis. Biasanya saya membalas dalam satu hari kerja.">
       <div className="grid gap-12 md:grid-cols-[1fr_1.6fr]">
         <Reveal>
           <a href={waLink()} target="_blank" rel="noopener noreferrer" data-cursor="Chat" className="font-display text-4xl transition-colors hover:text-accent md:text-5xl">Chat Me ↗</a>
-          <p className="mt-6 text-muted">Atau temukan saya di:</p>
+          <p className="mt-6 text-muted">Butuh website untuk bisnis atau sekolah Anda? Kirim brief lewat <a href={AppConfig.studio.url} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-4">{AppConfig.studio.name}</a>. Atau temukan saya di:</p>
           <SocialMedia childClass="mt-5 flex gap-5" />
         </Reveal>
         <Reveal delay={0.1}>
@@ -43,10 +44,10 @@ const Contact = () => {
             <label className="grid gap-2 text-sm text-muted">Email
               <input name="email" type="email" required autoComplete="email" className="field" placeholder="nama@domain.com" />
             </label>
-            <label className="grid gap-2 text-sm text-muted">Layanan
+            <label className="grid gap-2 text-sm text-muted">Topik
               <select name="layanan" className="field">
-                <option>Landing Page</option><option>Company Profile</option><option>Custom Web Application</option>
-                <option>Website Maintenance</option><option>Belum tahu, ingin konsultasi</option>
+                <option>Proyek website atau aplikasi web</option><option>Perawatan website</option><option>Kolaborasi</option>
+                <option>Peluang kerja</option><option>Pertanyaan lainnya</option>
               </select>
             </label>
             <label className="grid gap-2 text-sm text-muted">Pesan

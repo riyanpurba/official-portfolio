@@ -1,9 +1,11 @@
 export const AppConfig = {
   author: 'Riyan Purba',
+  // Brand studio untuk jasa dan calon klien. TODO: pastikan domain MIQVERO sudah aktif.
+  studio: { name: 'MIQVERO', url: 'https://miqvero.vercel.app/?utm_source=riyanpurba&utm_medium=portfolio' },
   site_name: 'Riyan Purba',
   title: 'Riyan Purba - Fullstack Web Developer',
-  description: 'Fullstack Web Developer untuk UMKM, sekolah, dan bisnis: landing page, company profile, dan aplikasi web dengan React dan Laravel.',
-  keywords: "fullstack web developer, jasa pembuatan website, jasa web developer, aplikasi web, landing page, company profile, CMS, Riyan Purba.",
+  description: 'Fullstack Web Developer untuk UMKM, sekolah, dan bisnis: website profesional, integrasi API, dan aplikasi web dengan React, Next.js, dan Laravel. Jasa lewat MIQVERO.',
+  keywords: "fullstack web developer, react, typescript, next.js, laravel, rest api, jasa pembuatan website, aplikasi web, MIQVERO, Riyan Purba.",
   locale: 'id_ID',
   canonical: 'https://riyanpurba.vercel.app/',
   image: '/rynprb.png',
