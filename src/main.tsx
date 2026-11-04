@@ -1,12 +1,12 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import TagManager from 'react-gtm-module';
 
 import App from './App';
-import { AppConfig } from '@/utils/AppConfig';
+import { initClickTracking } from '@/utils/analytics';
 import './styles/global.css';
 
-TagManager.initialize({ gtmId: AppConfig.GTM });
+// GTM dimuat dari index.html. Di sini hanya pelacakan klik ke dataLayer.
+initClickTracking();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

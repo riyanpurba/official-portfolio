@@ -3,6 +3,7 @@ import * as emailjs from 'emailjs-com';
 
 import { Reveal, Section } from '@/components/ui/Reveal';
 import { AppConfig } from '@/utils/AppConfig';
+import { track } from '@/utils/analytics';
 import { SocialMedia } from '@/templates/SocialMedia';
 import { waLink } from '@/utils/whatsapp';
 
@@ -16,6 +17,7 @@ const Contact = () => {
     try {
       await emailjs.sendForm('service_am1leeb', 'template_nooe1od', e.currentTarget, '46bzyeP_kxcN8XJoy');
       setStatus('ok');
+      track('generate_lead', { method: 'email_form' });
       formRef.current?.reset();
     } catch {
       setStatus('error');
@@ -25,6 +27,7 @@ const Contact = () => {
   const sendWhatsApp = () => {
     if (!formRef.current) return;
     const d = new FormData(formRef.current);
+    track('generate_lead', { method: 'whatsapp_form' });
     window.open(waLink(`Halo Riyan, saya ${d.get('nama') || ''}.\nTopik: ${d.get('layanan')}.\n\n${d.get('message') || ''}`), '_blank', 'noopener');
   };
 
