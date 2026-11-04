@@ -1,6 +1,5 @@
 import { FC } from "react";
 
-/* eslint-disable react/prop-types */
 interface GithubProps {
   iconClass: any;
 }

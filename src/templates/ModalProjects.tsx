@@ -1,75 +1,44 @@
-import Image from "next/image";
-import { FC } from "react";
+import { motion } from 'framer-motion';
+import { XMarkIcon } from '@heroicons/react/24/outline';
+import type { Project } from '@/json/project';
 
-interface ModalProjectsProps {
-  isOpen: boolean;
-  onClose: () => void;
-  detail: {
-    image: string;
-    title: string;
-    description: string;
-    tech: { name: string; slug: string }[];
-    url: string;
-  } | null;
-}
-
-const ModalProjects: FC<ModalProjectsProps> = ({ isOpen, onClose, detail }) => {
-  if (!isOpen || !detail) return null;
-
-  return (
-    <>
-      <div
-      className="absolute justify-center items-center flex overflow-hidden overflow-y-auto inset-0 z-50 outline-none focus:outline-none modalproject"
+const ModalProjects = ({ detail, onClose }: { detail: Project; onClose: () => void }) => (
+  <motion.div
+    className="fixed inset-0 z-[70] flex items-end justify-center bg-bg/80 p-0 backdrop-blur-sm sm:items-center sm:p-6"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    onClick={onClose}
+  >
+    <motion.div
+      role="dialog"
+      aria-modal="true"
+      aria-label={detail.title}
+      className="relative max-h-[90svh] w-full max-w-2xl overflow-y-auto rounded-t-3xl border border-line bg-surface sm:rounded-3xl"
+      initial={{ y: 60, opacity: 0, scale: 0.98 }}
+      animate={{ y: 0, opacity: 1, scale: 1 }}
+      exit={{ y: 40, opacity: 0 }}
+      transition={{ type: 'spring', damping: 26, stiffness: 260 }}
+      onClick={(e) => e.stopPropagation()}
     >
-      <div className="relative w-auto my-6 mx-auto max-w-3xl">
-        {/*content*/}
-        <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-          {/*body*/}
-          <div className="relative p-6 flex-auto">
-            <div className="flex items-center font-mono">
-              <div className="rounded-md bg-gray-800 shadow-lg">
-                <div className="flex items-start p-4 leading-none max-w-4xl">
-                  <div className="flex-none ">
-                  <Image
-                    src={detail.image}
-                    alt="pic"
-                    className="h-auto w-80 rounded-md transform border-4 border-gray-300 shadow-lg"
-                  />           
-                  </div>
-
-                  <div className="relative px-4 flex-col text-gray-300">
-                    <button type="button" onClick={onClose} className="absolute right-0 top-0 border border-white text-white font-semibold rounded-full w-8 h-8 transition duration-500 ease select-none hover:bg-black focus:outline-none focus:shadow-outline cursor-pointer">&times;</button>
-                    <p className="text-2xl font-bold m">{detail.title}</p>
-                    {/* <hr className="hr-text" data-content="" /> */}
-                    <div className="text-md flex justify-between">
-                      {/* <span className="font-bold">2h 2min | Crime, Drama, Thriller</span> */}
-                      {/* <span className="font-bold"></span> */}
-                    </div>
-                    <p className="my-5 block text-sm text-left">{detail.description}</p>
-                    <span className="text-sm font-medium">Technology :</span>
-                    <ul className="mt-3 mb-5 flex items-center justify-start gap-5">
-                      {
-                        detail.tech.map((item, index) => (
-                          <li key={index}>
-                            <Image src={"/icon/" + item.slug + ".svg"} width={30} height={30} alt="" />
-                          </li>
-                        ))
-                      }
-                    </ul>
-                    <div className="text-xs flex gap-4">
-                      <a href={detail.url} target="_black" className="border border-white text-white rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">Visit</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <button type="button" onClick={onClose} aria-label="Tutup" className="absolute right-3 top-3 flex h-11 w-11 items-center justify-center rounded-full bg-bg/70">
+        <XMarkIcon className="h-5 w-5" />
+      </button>
+      <img src={detail.image} alt={`Tampilan ${detail.title}`} className="w-full" />
+      <div className="p-6">
+        <h3 className="font-display text-3xl">{detail.title}</h3>
+        <p className="mt-3 text-muted">{detail.description}</p>
+        <ul className="mt-5 flex gap-3" aria-label="Teknologi">
+          {detail.tech.map((t) => (
+            <li key={t.slug} className="flex h-10 w-10 items-center justify-center rounded-lg bg-white">
+              <img src={`/icon/${t.slug}.svg`} alt={t.name} title={t.name} width={24} height={24} />
+            </li>
+          ))}
+        </ul>
+        <a href={detail.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-6">Kunjungi website</a>
       </div>
-    </div>
-    <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
-    </>
-  );
-}
+    </motion.div>
+  </motion.div>
+);
 
-export { ModalProjects }
+export { ModalProjects };

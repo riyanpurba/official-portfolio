@@ -1,24 +1,14 @@
-FROM node:18-alpine as builder
-
-RUN mkdir -p /next
-WORKDIR /next
-
+FROM node:20-alpine AS builder
+WORKDIR /app
 COPY package*.json ./
-
+# switch to `npm ci` once package-lock.json is committed
 RUN npm install
-
 COPY . .
-
 RUN npm run build
 
-FROM nginx:1.16.0-alpine
-
-COPY --from=builder /next/out /usr/share/nginx/html
-
-RUN rm /etc/nginx/conf.d/*
-
+FROM nginx:1.27-alpine
+RUN rm -f /etc/nginx/conf.d/*
+COPY --from=builder /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-EXPOSE 3001
-
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

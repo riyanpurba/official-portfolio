@@ -12,17 +12,17 @@ const SocialMedia: FC<SocialMediaProps> = ({ childClass }) => {
     <ul className={childClass}>
       <li>
         <a href="https://github.com/riyanpurba" target="_blank" className="cursor-pointer" rel="noreferrer" title="github">
-          <Github iconClass="w-6 h-6 text-white hover:text-yellow" />
+          <Github iconClass="w-6 h-6 text-muted hover:text-accent" />
         </a>
       </li>
       <li>
         <a href="https://instagram.com/riyanpurba" target="_blank" className="cursor-pointer" rel="noreferrer" title="instagram">
-          <Instagram iconClass="w-6 h-6 text-white hover:text-yellow" />
+          <Instagram iconClass="w-6 h-6 text-muted hover:text-accent" />
         </a>
       </li>
       <li>
         <a href="https://linkedin.com/in/riyanpurba" target="_blank" className="cursor-pointer" rel="noreferrer" title="linkedin">
-          <LinkedIn iconClass="w-6 h-6 text-white hover:text-yellow" />
+          <LinkedIn iconClass="w-6 h-6 text-muted hover:text-accent" />
         </a>
       </li>
     </ul>

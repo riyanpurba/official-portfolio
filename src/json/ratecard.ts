@@ -1,48 +1,35 @@
+import { waLink } from '@/utils/whatsapp';
+
 interface RateCardProps {
-    type: string;
-    price: string;
-    description: string[];
-    whatsappLink: string;
+  type: string;
+  price: string;
+  description: string[];
+  whatsappLink: string;
 }
 
 export const ratecard: RateCardProps[] = [
-    {
-        type: "Starter",
-        price: "Rp 500.000,-",
-        description: [
-            "✅ Desain responsif & modern",
-            "✅ SSL",
-            "✅ Fokus promosi 1 produk / layanan",
-            "✅ Cocok untuk campaign, iklan, promo",
-            "✅ Estimasi selesai 2-3 hari",
-            "💡 Domain + Hosting bisa dibantu (opsional)",
-        ],
-        whatsappLink: "https://wa.me/6282137527284?text=Halo%2C%20saya%20tertarik%20dengan%20paket%20Starter%20Rp500.000%2C%20boleh%20saya%20tanya-tanya%3F"
-    },
-    {
-        type: "Basic",
-        price: "Rp 750.000,-",
-        description: [
-            "✅ Halaman: Tentang, Layanan, Galeri, Kontak",
-            "✅ SSL",
-            "✅ Mobile-friendly",
-            "✅ Bisa custom sesuai bidang usaha",
-            "✅ Estimasi selesai 3-5 hari",
-            "💡 Domain + Hosting bisa dibantu (opsional)",
-        ],
-        whatsappLink: "https://wa.me/6282137527284?text=Halo%2C%20saya%20tertarik%20dengan%20paket%20Basic%20Rp750.000%2C%20saya%20ingin%20buat%20website%20untuk%20bisnis%20saya."
-    },
-    {
-        type: "Plus",
-        price: "Rp 1.500.000,-",
-        description: [
-            "✅ CMS custom (bukan WordPress)",
-            "✅ SSL",
-            "✅ Posting berita, tiket, atau produk",
-            "✅ Admin panel untuk kelola konten",
-            "✅ Bisa multi user & role admin",
-            "💡 Domain + Hosting bisa dibantu (opsional)",
-        ],
-        whatsappLink: "https://wa.me/6282137527284?text=Halo%2C%20saya%20tertarik%20dengan%20paket%20Plus%20Rp1.500.000%2C%20dan%20butuh%20website%20dengan%20CMS%20custom%20%2B%20admin%20panel."
-    }
+  {
+    type: 'Landing Page',
+    price: 'Rp900 rb – 1,5 jt',
+    description: ['✅ Satu halaman, responsive', '✅ Tombol CTA WhatsApp', '✅ SEO dasar', '✅ Deployment', '💡 Cocok untuk promo, campaign, dan satu produk/layanan'],
+    whatsappLink: waLink('Halo Riyan, saya tertarik dengan paket Landing Page. Boleh saya tanya-tanya?'),
+  },
+  {
+    type: 'Company Profile',
+    price: 'Rp1,8 – 3 jt',
+    description: ['✅ Home, About, Services, Contact', '✅ Responsive di semua perangkat', '✅ SEO dasar', '✅ Deployment', '💡 Cocok untuk sekolah, UMKM, dan perusahaan kecil'],
+    whatsappLink: waLink('Halo Riyan, saya tertarik dengan paket Company Profile. Boleh saya konsultasi kebutuhan saya?'),
+  },
+  {
+    type: 'Custom Web App',
+    price: 'Rp4 – 8 jt+',
+    description: ['✅ React/Next.js + Laravel API', '✅ Autentikasi & dashboard', '✅ Database', '✅ Harga mengikuti scope', '💡 Contoh: PPDB, sistem pemesanan, panel admin'],
+    whatsappLink: waLink('Halo Riyan, saya ingin membuat aplikasi web custom. Boleh saya ceritakan kebutuhannya?'),
+  },
+  {
+    type: 'Maintenance',
+    price: 'Rp300 – 500 rb/bulan',
+    description: ['✅ Perbaikan bug terbatas', '✅ Update konten minor', '✅ Update dependency', '✅ Monitoring dasar', '💡 Untuk website yang sudah berjalan'],
+    whatsappLink: waLink('Halo Riyan, saya tertarik dengan layanan maintenance website. Boleh saya tanya detailnya?'),
+  },
 ];

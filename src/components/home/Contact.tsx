@@ -1,120 +1,72 @@
-import React, { useState } from 'react'
-import * as emailjs from 'emailjs-com'
+import { useRef, useState } from 'react';
+import * as emailjs from 'emailjs-com';
 
-import { SocialMedia } from "@/templates/SocialMedia"
-
-const Form = () => {
-  const [loading, setLoading] = useState(false);  // Loading state
-  const [error, setError] = useState<string | null>(null);  // Error state
-  const [success, setSuccess] = useState<boolean>(false);  // Success state
-
-  const handleSubmit: React.FormEventHandler = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-    setSuccess(false);
-
-    setTimeout(async () => {
-        try {
-          const result = await emailjs.sendForm(
-            'service_am1leeb',
-            'template_nooe1od',
-            e.target as HTMLFormElement,
-            '46bzyeP_kxcN8XJoy'
-          );
-          setSuccess(true);
-          console.log(result.text);
-          (e.target as HTMLFormElement).reset();
-
-          // Hide success message after 2 seconds
-          setTimeout(() => {
-            setSuccess(false);
-          }, 2000);
-        } catch (error) {
-          setError('Failed to send the email. Please try again.');
-          console.error(error);
-        } finally {
-          setLoading(false);
-        }
-    }, 2000);
-  }
-  return (
-    <>
-      {success && 
-        <div className='w-full bg-green-500 text-white py-2 px-4 mb-3 rounded shadow-md transition-opacity duration-300'>
-          <p className="">Berhasil Terkirim</p>
-        </div>
-      }
-      {error && 
-        <div className='w-full bg-red-500 text-white py-2 px-4 mb-3 rounded shadow-md transition-opacity duration-300'>
-          <p className="">{error}</p>
-        </div>
-      }
-      <form onSubmit={handleSubmit}>
-        <div className="grid gap-10 grid-cols-1 md:grid-cols-6">
-          <div className="md:col-span-3">
-            <label className="text-white text-lg font-roboto font-normal" htmlFor="nama">Nama</label>
-            <input 
-              type="text" 
-              name="nama" 
-              id="nama" 
-              className="p-4 w-full outline-none text-black bg-white border-b-[1px] border-b-[#B9B9B9] focus:outline-none transition-all placeholder:font-roboto" 
-              placeholder="Nama"
-            />
-          </div>
-
-          <div className="md:col-span-3">
-            <label className="text-white text-lg font-roboto font-normal" htmlFor="email">Email</label>
-            <input 
-              type="email" 
-              name="email" 
-              id="email" 
-              className="p-4 w-full outline-none text-black bg-white border-b-[1px] border-b-[#B9B9B9] focus:outline-none transition-all placeholder:font-roboto" 
-              placeholder="example@domain.com"
-            />
-          </div>
-
-          <div className="md:col-span-6">
-            <label className="text-white text-lg font-roboto font-normal" htmlFor="message">Pesan</label>
-            <textarea 
-              name="message" 
-              id="message" 
-              className="p-4 w-full outline-none text-black bg-white border-b-[1px] border-b-[#B9B9B9] focus:outline-none transition-all placeholder:font-roboto" 
-              rows={5} 
-              placeholder="Pesan"
-            ></textarea>
-          </div>
-        </div>
-        <button
-          id="cta_submit"
-          className="w-auto mt-6 px-8 py-2 text-center text-white font-semibold bg-gray-500 hover:bg-gray-800 transition rounded"
-          disabled={loading}
-        >
-          {loading ? 'Loading...' : 'Kirim' }
-        </button>
-      </form>
-    </>
-  )
-}
+import { Reveal, Section } from '@/components/ui/Reveal';
+import { SocialMedia } from '@/templates/SocialMedia';
+import { waLink } from '@/utils/whatsapp';
 
 const Contact = () => {
-  return (
-    <section id="contact" className="relative w-full h-full py-10 2xl:py-20 xl:py-20 lg:py-20 md:py-20 bg-black text-white flex items-center">
-      <div className="container">
-        <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-10">
-          <div className="relative w-full">
-            <p className="flex items-center justify-start gap-3">
-              <span className="text-[28px] font-roboto font-bold">Get in Touch.</span>
-            </p>
-            <SocialMedia childClass="py-4 flex gap-4" />
-          </div>
-          <div className="col-span-3">
-            <Form />
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
+  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'ok' | 'error'>('idle');
 
-export { Contact }
+  const sendEmail: React.FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault();
+    setStatus('loading');
+    try {
+      await emailjs.sendForm('service_am1leeb', 'template_nooe1od', e.currentTarget, '46bzyeP_kxcN8XJoy');
+      setStatus('ok');
+      formRef.current?.reset();
+    } catch {
+      setStatus('error');
+    }
+  };
+
+  const sendWhatsApp = () => {
+    if (!formRef.current) return;
+    const d = new FormData(formRef.current);
+    window.open(waLink(`Halo Riyan, saya ${d.get('nama') || ''}.\nSaya tertarik dengan: ${d.get('layanan')}.\n\n${d.get('message') || ''}`), '_blank', 'noopener');
+  };
+
+  return (
+    <Section id="kontak" eyebrow="Kontak" title="Ceritakan kebutuhan Anda" sub="Konsultasi awal gratis. Biasanya saya membalas dalam satu hari kerja.">
+      <div className="grid gap-12 md:grid-cols-[1fr_1.6fr]">
+        <Reveal>
+          <a href={waLink()} target="_blank" rel="noopener noreferrer" data-cursor="Chat" className="font-display text-4xl transition-colors hover:text-accent md:text-5xl">Chat Me ↗</a>
+          <p className="mt-6 text-muted">Atau temukan saya di:</p>
+          <SocialMedia childClass="mt-5 flex gap-5" />
+        </Reveal>
+        <Reveal delay={0.1}>
+          <form ref={formRef} onSubmit={sendEmail} className="grid gap-5">
+            <label className="grid gap-2 text-sm text-muted">Nama
+              <input name="nama" required autoComplete="name" className="field" placeholder="Nama Anda" />
+            </label>
+            <label className="grid gap-2 text-sm text-muted">Email
+              <input name="email" type="email" required autoComplete="email" className="field" placeholder="nama@domain.com" />
+            </label>
+            <label className="grid gap-2 text-sm text-muted">Layanan
+              <select name="layanan" className="field">
+                <option>Landing Page</option><option>Company Profile</option><option>Custom Web Application</option>
+                <option>Website Maintenance</option><option>Belum tahu, ingin konsultasi</option>
+              </select>
+            </label>
+            <label className="grid gap-2 text-sm text-muted">Pesan
+              <textarea name="message" required rows={5} className="field" placeholder="Ceritakan singkat kebutuhan Anda" />
+            </label>
+            <div className="flex flex-wrap gap-3">
+              <button type="button" onClick={sendWhatsApp} className="btn btn-primary">Kirim</button>
+              {/* <button type="submit" disabled={status === 'loading'} className="btn btn-ghost disabled:opacity-60">
+                {status === 'loading' ? 'Mengirim...' : 'Kirim email'}
+              </button> */}
+            </div>
+            <p role="status" aria-live="polite" className={`text-sm ${status === 'error' ? 'text-red-400' : 'text-accent'}`}>
+              {status === 'ok' && 'Pesan terkirim. Terima kasih, saya segera membalas.'}
+              {status === 'error' && 'Gagal mengirim email. Coba lagi atau gunakan WhatsApp.'}
+            </p>
+          </form>
+        </Reveal>
+      </div>
+    </Section>
+  );
+};
+
+export { Contact };

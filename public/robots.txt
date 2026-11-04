@@ -1,3 +1,4 @@
 User-agent: *
+Allow: /
 
-Sitemap: https://riyanpurba.com/sitemap.xml
+Sitemap: https://riyanpurba.vercel.app/sitemap.xml

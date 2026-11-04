@@ -1,0 +1,10 @@
+{
+  "name": "Riyan Purba - Fullstack Web Developer",
+  "short_name": "Riyan Purba",
+  "lang": "id",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0D12",
+  "theme_color": "#0B0D12",
+  "icons": [{ "src": "/apple-touch-icon.png", "sizes": "640x640", "type": "image/png" }]
+}
