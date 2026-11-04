@@ -83,7 +83,7 @@ const Header = () => {
                 </ul>
               </nav>
               <div className="flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6 text-sm text-muted">
-                <a href={waLink()} target="_blank" rel="noopener noreferrer" className="hover:text-accent">WhatsApp: +62 821-3752-7284</a>
+                <a href={waLink()} target="_blank" rel="noopener noreferrer" className="hover:text-accent">WhatsApp: +62 813-8507-9843</a>
                 <SocialMedia childClass="flex gap-5" />
               </div>
             </div>
