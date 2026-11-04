@@ -9,11 +9,11 @@ import { SocialMedia } from '@/templates/SocialMedia';
 
 const links = [
   ['Tentang', '#about'],
-  ['MIQVERO', '#layanan'],
+  ['Layanan', '#layanan'],
   ['Proyek', '#proyek'],
   ['Pengalaman', '#pengalaman'],
   ['Studi Kasus', '#studi-kasus'],
-  ['Testimoni', '#testimoni'],
+  // ['Testimoni', '#testimoni'],
   ['FAQ', '#faq'],
   ['Kontak', '#kontak'],
 ];

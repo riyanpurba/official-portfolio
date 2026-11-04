@@ -5,7 +5,7 @@ import { Hero } from '@/components/home/Hero';
 import { About } from '@/components/home/About';
 import { Clients } from '@/components/home/Clients';
 import { Skills } from '@/components/home/Skills';
-import { Testimonials } from '@/components/home/Testimonials';
+// import { Testimonials } from '@/components/home/Testimonials';
 import { StartProject } from '@/components/home/StartProject';
 import { Projects } from '@/components/home/Projects';
 import { CaseStudies } from '@/components/home/CaseStudies';
@@ -28,7 +28,7 @@ const Base = () => (
       <Clients />
       <Skills />
       <CaseStudies />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Faq />
       <StartProject />
       <Contact />

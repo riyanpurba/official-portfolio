@@ -12,7 +12,13 @@ const About = () => (
       </Reveal>
       <Reveal delay={0.1}>
         <p className="text-lg leading-relaxed text-muted">
-          Fullstack Web Developer dengan pengalaman lebih dari 5 tahun membangun aplikasi web yang scalable dengan ReactJS, TypeScript, Laravel, dan REST API. Terbiasa mengubah desain UI/UX menjadi kode yang bersih dan cepat, serta men-deploy ke production dengan Docker dan VPS.
+        Saya mengerjakan website dan aplikasi web sejak 2017, dari portal berita dan company profile sampai sistem reward dan platform verifikasi sertifikat.
+        </p>
+        <p className="text-lg leading-relaxed text-muted">
+        Saya paling sering membantu UMKM, sekolah, dan bisnis yang butuh website profesional tanpa proses ribet: tampilan rapi di HP, loading cepat, dan konten yang bisa Anda kelola sendiri lewat admin panel.
+        </p>
+        <p className="text-lg leading-relaxed text-muted">
+        Stack saya: React, Next.js, TypeScript, Laravel, dan Tailwind CSS, dengan integrasi REST API bila bisnis Anda membutuhkannya. Saya juga terbiasa men-deploy sampai live (Docker + VPS), jadi Anda tidak perlu mengurus sisi teknisnya.
         </p>
         <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-line pt-8">
           {stats.map(([n, l]) => (

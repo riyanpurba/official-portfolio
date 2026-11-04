@@ -21,7 +21,7 @@ const Hero = () => (
 
         <h1 className="mt-6 font-display text-[clamp(2.6rem,8.2vw,6.6rem)] leading-[0.98]">
           {[
-            <>Halo, saya</>,
+            <>Saya</>,
             <span key="n" className="text-accent">Riyan Purba</span>,
             <span key="r" className="flex flex-wrap items-center gap-x-4">
               {/* <img src="/rynprb.png" alt="" width={96} height={96} className="inline-block h-[0.8em] w-[1.6em] rounded-full border border-line object-cover" /> */}
@@ -36,7 +36,7 @@ const Hero = () => (
         </h1>
 
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.6 }} className="mt-8 max-w-md text-lg text-muted">
-          Membangun website profesional, integrasi API, dan aplikasi web yang cepat dan rapi untuk UMKM, sekolah, dan bisnis.
+        Membantu UMKM, sekolah, dan bisnis punya website yang profesional, cepat, dan mudah dikelola. Membangun website dan aplikasi web sejak 2017.
         </motion.p>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.85, duration: 0.6 }} className="mt-8 flex flex-wrap gap-3">
           <a href="#proyek" data-cursor="Lihat" className="btn btn-primary">Lihat proyek</a>
