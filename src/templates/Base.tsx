@@ -11,6 +11,7 @@ import { Projects } from '@/components/home/Projects';
 import { CaseStudies } from '@/components/home/CaseStudies';
 import { Services } from '@/components/home/Services';
 import { RateCard } from '@/components/home/RateCard';
+import { PaketCepat } from '@/components/home/PaketCepat';
 import { Faq } from '@/components/home/Faq';
 import { Contact } from '@/components/home/Contact';
 
@@ -26,6 +27,7 @@ const Base = () => (
       <About />
       <Services />
       <RateCard />
+      <PaketCepat />
       <Projects />
       <Clients />
       <Skills />

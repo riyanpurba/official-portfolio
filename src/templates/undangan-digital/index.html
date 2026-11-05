@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Undangan Pernikahan Rizky & Amelia</title>
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--outer:#CBD5CC;--bg:#E9EEE8;--card:#F6F8F4;--fg:#1E2D26;--muted:#56665E;--line:#C9D3CA;--brass:#8A6A38;--pine:#1E2D26;--mist:#E9EEE8;--gold:#C2A06A;
+--display:"Bodoni Moda",Georgia,"Times New Roman",serif;--body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--outer:#0A110E;--bg:#121B17;--card:#1A2620;--fg:#E9EEE8;--muted:#9DB0A5;--line:#2C3B33;--brass:#C2A06A}}
+:root[data-theme="dark"]{--outer:#0A110E;--bg:#121B17;--card:#1A2620;--fg:#E9EEE8;--muted:#9DB0A5;--line:#2C3B33;--brass:#C2A06A}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--outer);color:var(--fg);font:400 1rem/1.65 var(--body)}
+body.locked{overflow:hidden}
+.page{max-width:30rem;min-height:100vh;margin:0 auto;padding:0 1.5rem;background:var(--bg)}
+@media (min-width:520px){.page{box-shadow:0 0 0 1px var(--line)}}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0;line-height:1.1}
+h2{font-size:2rem;text-align:center;margin-bottom:1.6rem}
+p{margin:0}
+.muted{color:var(--muted)}
+.c{text-align:center}
+a,button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 1.6rem;border-radius:999px;border:1px solid var(--brass);background:var(--brass);color:#fff;font-weight:600;text-decoration:none;cursor:pointer}
+:root:not([data-theme="light"]) .btn{color:#121B17}
+.btn.ghost{background:transparent;color:var(--brass)}
+.btn:hover{filter:brightness(1.1)}
+
+/* Sampul */
+#cover{position:fixed;inset:0;z-index:50;background:var(--pine);color:var(--mist);display:grid;place-items:center;padding:calc(2rem + env(safe-area-inset-top,0px)) 1.5rem calc(2rem + env(safe-area-inset-bottom,0px));text-align:center;transition:transform 1s cubic-bezier(.7,0,.2,1)}
+#cover.open{transform:translateY(-100%)}
+#cover .names{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(3.6rem,19vw,6.2rem);line-height:.92;margin:1.2rem 0 1.6rem}
+#cover .names span{display:block}
+#cover .amp{font-size:.5em;color:var(--gold);margin:.1em 0 .1em 0}
+#cover .to{color:#A9BAB0;font-size:.95rem}
+#cover .guest{font-family:var(--display);font-size:1.5rem;margin:.2rem 0 1.8rem;overflow-wrap:anywhere}
+#cover .btn{background:var(--gold);border-color:var(--gold);color:#121B17}
+
+/* Pembuka */
+.hero{padding-top:2.5rem}
+.arch{width:72%;aspect-ratio:3/4;margin:0 auto 2rem;border-radius:999px 999px 1rem 1rem;overflow:hidden;border:1px solid var(--line)}
+.arch img{display:block;width:100%;height:100%;object-fit:cover}
+.hero h1{font-family:var(--display);font-style:italic;font-size:clamp(3rem,15vw,4.6rem);text-align:center}
+.hero .amp{display:block;color:var(--brass);font-size:.55em;margin:.1em 0}
+.hero .date{margin-top:1.2rem;font-family:var(--display);font-size:1.25rem}
+.hero .quote{margin-top:1.6rem;color:var(--muted);max-width:26rem;margin-inline:auto}
+.couple{display:grid;gap:1.8rem;margin-top:2.4rem;text-align:center}
+.couple h3{font-size:1.7rem;font-style:italic}
+
+/* Acara */
+.ev{background:var(--card);border:1px solid var(--line);border-radius:1.25rem;padding:1.8rem 1.5rem;text-align:center}
+.ev+.ev{margin-top:1.25rem}
+.ev h3{font-size:1.6rem;margin-bottom:.8rem}
+.ev .when{font-weight:600}
+.ev .when+.when{color:var(--brass)}
+.ev .btn{margin-top:1.2rem}
+
+/* Hitung mundur */
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;text-align:center}
+.cd div{border:1px solid var(--line);border-radius:1rem;padding:1rem .2rem}
+.cd b{display:block;font-family:var(--display);font-weight:500;font-size:2rem;line-height:1}
+.cd small{color:var(--muted);font-size:.8rem}
+#cdnote{margin-top:1.2rem;text-align:center}
+
+/* Galeri */
+.gal{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:9.5rem;gap:.6rem}
+.gal figure{margin:0;border-radius:1rem;overflow:hidden;background:var(--card)}
+.gal img{display:block;width:100%;height:100%;object-fit:cover}
+.gal .tall{grid-row:span 2}.gal .wide{grid-column:span 2}
+.note{margin-top:1rem;text-align:center;color:var(--muted);font-size:.85rem}
+
+/* RSVP */
+form{display:grid;gap:1rem}
+label{display:grid;gap:.35rem;font-weight:500}
+input,select,textarea{width:100%;min-height:46px;padding:.65rem .9rem;border:1px solid var(--line);border-radius:.8rem;background:var(--card)}
+textarea{min-height:96px;resize:vertical}
+footer{padding:3rem 0 4rem;text-align:center;border-top:1px solid var(--line)}
+footer .names{font-family:var(--display);font-style:italic;font-size:2rem;margin-top:.8rem}
+@media (prefers-reduced-motion:reduce){#cover{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body class="locked">
+
+<div id="cover" role="dialog" aria-label="Sampul undangan">
+  <div>
+    <p class="to">Undangan pernikahan</p>
+    <div class="names" aria-label="Rizky dan Amelia"><span data-g></span><span class="amp">&amp;</span><span data-b></span></div>
+    <p class="to">Kepada Yth.</p>
+    <p class="guest" id="guest">Tamu Undangan</p>
+    <button class="btn" id="open" type="button">Buka undangan</button>
+  </div>
+</div>
+
+<main class="page">
+  <section class="hero" id="awal">
+    <div class="arch"><img id="heroimg" alt="Foto contoh pasangan saat matahari terbenam"></div>
+    <p class="c muted">Kami mengundang Anda untuk hadir di hari bahagia kami</p>
+    <h1 style="margin-top:1.4rem"><span data-g></span><span class="amp">&amp;</span><span data-b></span></h1>
+    <p class="c date" id="tgl"></p>
+    <p class="c quote">Dengan memohon rahmat dan ridho Tuhan Yang Maha Esa, kami mengundang Bapak/Ibu/Saudara/i untuk memberikan doa restu kepada kedua mempelai.</p>
+    <div class="couple">
+      <div><h3 id="gfull"></h3><p class="muted" id="gpar"></p></div>
+      <div><h3 id="bfull"></h3><p class="muted" id="bpar"></p></div>
+    </div>
+  </section>
+
+  <section id="acara">
+    <h2>Acara</h2>
+    <div id="events"></div>
+  </section>
+
+  <section id="hitung">
+    <h2>Menuju hari bahagia</h2>
+    <div class="cd" role="timer" aria-live="off">
+      <div><b id="d">0</b><small>hari</small></div>
+      <div><b id="h">0</b><small>jam</small></div>
+      <div><b id="m">0</b><small>menit</small></div>
+      <div><b id="s">0</b><small>detik</small></div>
+    </div>
+    <p id="cdnote" class="muted"></p>
+  </section>
+
+  <section id="galeri">
+    <h2>Galeri</h2>
+    <div class="gal" id="gal"></div>
+    <p class="note">Foto contoh. Ganti dengan foto prewedding klien (lihat komentar di bagian skrip).</p>
+  </section>
+
+  <section id="rsvp">
+    <h2>Konfirmasi kehadiran</h2>
+    <p class="c muted" style="margin:-1rem 0 1.6rem">Isi formulir ini, lalu kirim lewat WhatsApp ke mempelai.</p>
+    <form id="rsvpForm">
+      <label>Nama<input id="fn" required autocomplete="name"></label>
+      <label>Kehadiran
+        <select id="fs"><option value="hadir">Saya akan hadir</option><option value="tidak">Mohon maaf, belum bisa hadir</option></select>
+      </label>
+      <label id="jl">Jumlah tamu<input id="fj" type="number" min="1" max="10" value="1" inputmode="numeric"></label>
+      <label>Ucapan dan doa<textarea id="fu"></textarea></label>
+      <button class="btn" type="submit">Kirim lewat WhatsApp</button>
+    </form>
+  </section>
+
+  <footer>
+    <p class="muted">Merupakan kehormatan bagi kami atas kehadiran dan doa restu Anda.</p>
+    <p class="names" id="fnames"></p>
+  </footer>
+</main>
+
+<script>
+// ===== UBAH DATA DI SINI =====
+var D = {
+  groom: "Rizky", bride: "Amelia",
+  groomFull: "Rizky Pratama, S.T.", groomParents: "Putra dari Bapak Contoh Pratama & Ibu Contoh Lestari",
+  brideFull: "Amelia Putri, S.Pd.", brideParents: "Putri dari Bapak Contoh Putra & Ibu Contoh Sari",
+  date: "2027-01-17T10:00:00+07:00",
+  waNumber: "6281234567890", // nomor WhatsApp mempelai, format 62...
+  events: [
+    { title: "Akad nikah", time: "10.00 WIB", place: "Masjid Contoh Raya", address: "Jl. Contoh No. 1, Medan", map: "https://maps.google.com/?q=Medan" },
+    { title: "Resepsi", time: "12.00 WIB sampai selesai", place: "Gedung Serbaguna Contoh", address: "Jl. Contoh No. 2, Medan", map: "https://maps.google.com/?q=Medan" }
+  ]
+};
+// =============================
+var $ = function (id) { return document.getElementById(id); };
+var when = new Date(D.date);
+document.querySelectorAll("[data-g]").forEach(function (e) { e.textContent = D.groom; });
+document.querySelectorAll("[data-b]").forEach(function (e) { e.textContent = D.bride; });
+$("gfull").textContent = D.groomFull; $("gpar").textContent = D.groomParents;
+$("bfull").textContent = D.brideFull; $("bpar").textContent = D.brideParents;
+$("fnames").textContent = D.groom + " & " + D.bride;
+var fmt = new Intl.DateTimeFormat("id-ID", { weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Jakarta" });
+$("tgl").textContent = fmt.format(when);
+
+var guest = (new URLSearchParams(location.search).get("to") || "").trim();
+if (guest) { $("guest").textContent = guest; $("fn").value = guest; }
+
+$("events").innerHTML = "";
+D.events.forEach(function (ev) {
+  var box = document.createElement("div"); box.className = "ev";
+  var h = document.createElement("h3"); h.textContent = ev.title;
+  var t = document.createElement("p"); t.className = "when"; t.textContent = $("tgl").textContent;
+  var tm = document.createElement("p"); tm.className = "when"; tm.textContent = ev.time;
+  var p = document.createElement("p"); p.style.marginTop = ".6rem"; p.textContent = ev.place;
+  var a = document.createElement("p"); a.className = "muted"; a.textContent = ev.address;
+  var l = document.createElement("a"); l.className = "btn ghost"; l.href = ev.map; l.target = "_blank"; l.rel = "noopener noreferrer"; l.textContent = "Buka peta";
+  [h, t, tm, p, a, l].forEach(function (n) { box.appendChild(n); });
+  $("events").appendChild(box);
+});
+
+
+// ===== FOTO DUMMY (ilustrasi SVG). Untuk foto asli, ganti isi PHOTOS dengan nama file, mis. ["foto1.jpg", ...] =====
+function svg(x){return "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">' + x + '</svg>');}
+function grad(a,b,id){return '<defs><linearGradient id="'+(id||"g")+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+a+'"/><stop offset="1" stop-color="'+b+'"/></linearGradient></defs>';}
+var flowers = function(pts, cols){return pts.map(function(p,i){return '<circle cx="'+p[0]+'" cy="'+p[1]+'" r="'+(8+i%3*3)+'" fill="'+cols[i%cols.length]+'"/>';}).join("");};
+var arc = []; for (var k=0;k<=14;k++){var t=Math.PI*k/14; arc.push([150-80*Math.cos(t), 190-80*Math.sin(t)]);} for (var y=226;y<=330;y+=36){arc.push([70,y]);arc.push([230,y]);}
+var PHOTOS = [
+ svg(grad("#F2C9A0","#C98B8F")+'<rect width="300" height="400" fill="url(#g)"/><circle cx="150" cy="190" r="50" fill="#FBE3BF" opacity=".9"/><path d="M0 300Q90 250 160 290T300 270V400H0Z" fill="#2C3B33"/><path d="M0 340Q120 300 300 335V400H0Z" fill="#1E2D26"/><circle cx="135" cy="266" r="9" fill="#121B17"/><path d="M126 276h18l3 52h-24z" fill="#121B17"/><circle cx="166" cy="268" r="8" fill="#121B17"/><path d="M166 277l-17 52h34z" fill="#121B17"/>'),
+ svg('<rect width="300" height="400" fill="#1E2D26"/><path d="M70 400V190a80 80 0 0 1 160 0V400" fill="none" stroke="#C2A06A" stroke-width="4"/>'+flowers(arc,["#B9777A","#E9EEE8","#C2A06A"])),
+ svg(grad("#2C3B33","#121B17")+'<rect width="300" height="400" fill="url(#g)"/><circle cx="125" cy="200" r="48" fill="none" stroke="#C2A06A" stroke-width="6"/><circle cx="175" cy="200" r="48" fill="none" stroke="#E0C48F" stroke-width="6"/><path d="M175 142l8 10-8 10-8-10z" fill="#E9EEE8"/>'),
+ svg(grad("#16241E","#3A2F2A")+'<rect width="300" height="400" fill="url(#g)"/><path d="M0 90Q150 190 300 90" fill="none" stroke="#C2A06A" opacity=".6" stroke-width="2"/>'+[[40,120,10],[85,150,14],[150,165,12],[215,150,16],[262,120,10],[60,250,26],[230,280,34],[150,320,22],[100,200,40],[200,230,28]].map(function(c){return '<circle cx="'+c[0]+'" cy="'+c[1]+'" r="'+c[2]+'" fill="#C2A06A" opacity="'+(.18+c[2]%5*.08)+'"/>';}).join("")),
+ svg('<rect width="300" height="400" fill="#DCE5DC"/><g stroke="#4B6358" stroke-width="4"><path d="M150 360L100 210M150 360L150 190M150 360L200 210"/></g><rect x="136" y="300" width="28" height="22" rx="4" fill="#B9777A"/>'+flowers([[100,205],[150,185],[200,205],[125,225],[175,225],[150,215]],["#B9777A","#F6F8F4","#C2A06A"])),
+ svg(grad("#B9777A","#7D4A55")+'<rect width="300" height="400" fill="url(#g)"/><path d="M150 260C80 210 95 140 150 170 205 140 220 210 150 260Z" fill="#F6E6E0" opacity=".92"/>')
+];
+var ALTS = ["Foto contoh: pasangan di tepi bukit","Foto contoh: lengkung bunga","Foto contoh: cincin pernikahan","Foto contoh: lampu pesta malam","Foto contoh: buket bunga","Foto contoh: hati"];
+var CLS = ["tall","","","wide","",""];
+$("heroimg").src = PHOTOS[0];
+PHOTOS.forEach(function(src,i){
+  var f=document.createElement("figure"); if(CLS[i]) f.className=CLS[i];
+  var im=document.createElement("img"); im.src=src; im.alt=ALTS[i]; im.loading="lazy"; f.appendChild(im); $("gal").appendChild(f);
+});
+
+$("open").addEventListener("click", function () {
+  $("cover").classList.add("open");
+  document.body.classList.remove("locked");
+  window.scrollTo(0, 0);
+  setTimeout(function () { $("cover").style.display = "none"; }, 1100);
+});
+
+function tick() {
+  var diff = when - new Date();
+  if (diff <= 0) { $("cdnote").textContent = "Acara telah dimulai. Terima kasih atas doa dan kehadiran Anda."; ["d","h","m","s"].forEach(function (k) { $(k).textContent = "0"; }); return; }
+  var s = Math.floor(diff / 1000);
+  $("d").textContent = Math.floor(s / 86400);
+  $("h").textContent = Math.floor(s % 86400 / 3600);
+  $("m").textContent = Math.floor(s % 3600 / 60);
+  $("s").textContent = s % 60;
+  $("cdnote").textContent = "";
+}
+tick(); setInterval(tick, 1000);
+
+$("fs").addEventListener("change", function () { $("jl").style.display = this.value === "hadir" ? "" : "none"; });
+$("rsvpForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var hadir = $("fs").value === "hadir";
+  var msg = "Halo " + D.groom + " & " + D.bride + ", saya " + $("fn").value.trim() + " " +
+    (hadir ? "akan hadir bersama " + $("fj").value + " orang." : "mohon maaf belum bisa hadir.") +
+    ($("fu").value.trim() ? "\n\n" + $("fu").value.trim() : "");
+  window.open("https://wa.me/" + D.waNumber + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+});
+</script>
+</body>
+</html>
