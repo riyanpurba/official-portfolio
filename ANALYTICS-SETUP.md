@@ -11,7 +11,6 @@ Situs mengirim event ke `dataLayer` (`src/utils/analytics.ts`); GTM meneruskanny
 | Event | Kapan |
 |---|---|
 | `click_whatsapp` | klik link wa.me |
-| `click_miqvero` | klik link ke MIQVERO |
 | `download_cv` -> `file_download` di GA4 | klik link PDF (CV) |
 | `click_email` | klik mailto |
 | `click_social` | klik GitHub / LinkedIn / Instagram |

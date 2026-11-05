@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 import * as emailjs from 'emailjs-com';
 
 import { Reveal, Section } from '@/components/ui/Reveal';
-import { AppConfig } from '@/utils/AppConfig';
 import { track } from '@/utils/analytics';
 import { SocialMedia } from '@/templates/SocialMedia';
 import { waLink } from '@/utils/whatsapp';
@@ -36,7 +35,7 @@ const Contact = () => {
       <div className="grid gap-12 md:grid-cols-[1fr_1.6fr]">
         <Reveal>
           <a href={waLink()} target="_blank" rel="noopener noreferrer" data-cursor="Chat" className="font-display text-4xl transition-colors hover:text-accent md:text-5xl">Chat Me ↗</a>
-          <p className="mt-6 text-muted">Butuh website untuk bisnis atau sekolah Anda? Kirim brief lewat <a href={AppConfig.studio.url} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-4">{AppConfig.studio.name}</a>. Atau temukan saya di:</p>
+          <p className="mt-6 text-muted">Butuh website untuk bisnis atau sekolah Anda? Lihat <a href="#layanan" className="text-accent underline underline-offset-4">layanan dan harga awal</a>, lalu kirim brief lewat form ini. Atau temukan saya di:</p>
           <SocialMedia childClass="mt-5 flex gap-5" />
         </Reveal>
         <Reveal delay={0.1}>

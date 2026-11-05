@@ -7,7 +7,7 @@ const Footer = () => (
     <div className="wrap grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
       <div>
         <a href="#top" className="font-display text-3xl" aria-label="Kembali ke atas">RYNPRB</a>
-        <p className="mt-3 max-w-xs text-sm text-muted">Fullstack Web Developer untuk UMKM, sekolah, dan bisnis. Jasa pembuatan website lewat <a href={AppConfig.studio.url} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-4">{AppConfig.studio.name}</a>.</p>
+        <p className="mt-3 max-w-xs text-sm text-muted">Fullstack Web Developer untuk UMKM, sekolah, dan bisnis. Jasa pembuatan website, aplikasi web, dan perawatan bulanan. <a href="#layanan" className="text-accent underline underline-offset-4">Lihat layanan</a>.</p>
       </div>
       <div className="text-sm">
         {/* <p className="font-semibold text-accent">Kontak</p>

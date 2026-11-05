@@ -3,7 +3,7 @@ import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 
 import { Eyebrow } from '@/components/ui/Reveal';
 import { Marquee } from '@/components/ui/Marquee';
-import { AppConfig } from '@/utils/AppConfig';
+import { waLink } from '@/utils/whatsapp';
 
 const services = ['React', 'TypeScript', 'Next.js', 'Laravel', 'Tailwind CSS', 'REST API'];
 
@@ -40,7 +40,7 @@ const Hero = () => (
         </motion.p>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.85, duration: 0.6 }} className="mt-8 flex flex-wrap gap-3">
           <a href="#proyek" data-cursor="Lihat" className="btn btn-primary">Lihat proyek</a>
-          <a href={AppConfig.studio.url} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">Pesan lewat {AppConfig.studio.name}</a>
+          <a href={waLink()} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">Konsultasi gratis</a>
         </motion.div>
       </div>
 
@@ -49,7 +49,7 @@ const Hero = () => (
           <img src="/hero.png" alt="Riyan Purba, Fullstack Web Developer" width={1364} height={2052} className="absolute inset-0 h-full w-full object-cover object-top" />
         </div>
 
-        <a href={AppConfig.studio.url} target="_blank" rel="noopener noreferrer" aria-label="Konsultasi gratis lewat MIQVERO" data-cursor="Buka" className="group absolute -left-2 bottom-8 flex h-28 w-28 items-center justify-center rounded-full border border-line bg-bg md:-left-10 md:h-32 md:w-32">
+        <a href={waLink()} target="_blank" rel="noopener noreferrer" aria-label="Konsultasi gratis lewat WhatsApp" data-cursor="Chat" className="group absolute -left-2 bottom-8 flex h-28 w-28 items-center justify-center rounded-full border border-line bg-bg md:-left-10 md:h-32 md:w-32">
           <motion.svg viewBox="0 0 120 120" aria-hidden="true" className="absolute inset-0 h-full w-full" animate={{ rotate: 360 }} transition={{ duration: 18, ease: 'linear', repeat: Infinity }}>
             <defs><path id="rt" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0" /></defs>
             <text className="fill-fg text-[11px] font-semibold uppercase" letterSpacing="3.2"><textPath href="#rt">Konsultasi gratis ✦ Konsultasi gratis ✦</textPath></text>

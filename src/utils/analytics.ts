@@ -15,7 +15,6 @@ export const initClickTracking = () => {
     const href = a.getAttribute('href') || '';
     const label = (a.getAttribute('aria-label') || a.textContent || '').trim().slice(0, 80);
     if (href.includes('wa.me')) track('click_whatsapp', { link_text: label });
-    else if (href.includes('miqvero')) track('click_miqvero', { link_text: label });
     else if (/\.pdf($|\?)/i.test(href)) track('download_cv', { file_name: href.split('/').pop() });
     else if (href.startsWith('mailto:')) track('click_email', { link_text: label });
     else if (/github\.com|linkedin\.com|instagram\.com/.test(href)) track('click_social', { network: a.title || href, link_url: href });

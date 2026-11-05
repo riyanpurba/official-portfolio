@@ -1,10 +1,14 @@
 import { Reveal, Section } from '@/components/ui/Reveal';
+import { ratecard } from '@/json/ratecard';
+
+// Harga diturunkan dari ratecard.ts supaya hanya ada satu sumber.
+const priceAnswer = `Harga awal: ${ratecard.map((t) => `${t.name} mulai ${t.from}${t.unit ? ` ${t.unit}` : ''}`).join(', ')}. Harga final mengikuti kebutuhan dan scope proyek, dan belum termasuk domain dan hosting.`;
 
 const faqs = [
-  ['Apa hubungan Riyan Purba dan MIQVERO?', 'Situs ini adalah portfolio pribadi saya: pengalaman, kemampuan teknis, dan proyek. MIQVERO adalah studio web development yang saya pimpin, tempat calon klien melihat layanan, harga awal, dan mengirim brief proyek.'],
-  ['Bagaimana cara memesan website?', 'Kirim brief lewat MIQVERO. Konsultasi awal gratis dan saya balas dalam satu hari kerja.'],
-  ['Berapa biaya pembuatan website?', 'Daftar layanan, harga awal, dan sistem pembayaran lengkap ada di MIQVERO. Harga final mengikuti kebutuhan dan scope proyek.'],
-  ['Apakah ada layanan perawatan website?', 'Ada, lewat paket perawatan bulanan di MIQVERO: perbaikan bug terbatas, update konten minor, update dependency, dan monitoring dasar.'],
+  ['Layanan apa saja yang tersedia?', 'Landing page, company profile, aplikasi web custom, integrasi API, dan perawatan website bulanan untuk UMKM, sekolah, dan bisnis.'],
+  ['Bagaimana cara memesan website?', 'Hubungi saya lewat WhatsApp atau form kontak. Konsultasi awal gratis dan saya balas dalam satu hari kerja.'],
+  ['Berapa biaya pembuatan website?', priceAnswer],
+  ['Apakah ada layanan perawatan website?', 'Ada, lewat paket perawatan bulanan: perbaikan bug terbatas, update konten minor, update dependency, dan monitoring dasar.'],
   ['Teknologi apa yang Anda kuasai?', 'Saya terutama memakai React, TypeScript, Next.js, Laravel, Tailwind CSS, dan REST API, dengan deployment memakai Docker dan VPS.'],
   ['Apakah terbuka untuk kolaborasi atau peluang kerja?', 'Terbuka. Hubungi saya lewat form kontak atau WhatsApp di bawah.'],
 ];

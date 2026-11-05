@@ -9,7 +9,8 @@ import { Skills } from '@/components/home/Skills';
 import { StartProject } from '@/components/home/StartProject';
 import { Projects } from '@/components/home/Projects';
 import { CaseStudies } from '@/components/home/CaseStudies';
-import { Studio } from '@/components/home/Studio';
+import { Services } from '@/components/home/Services';
+import { RateCard } from '@/components/home/RateCard';
 import { Faq } from '@/components/home/Faq';
 import { Contact } from '@/components/home/Contact';
 
@@ -23,7 +24,8 @@ const Base = () => (
     <main id="konten">
       <Hero />
       <About />
-      <Studio />
+      <Services />
+      <RateCard />
       <Projects />
       <Clients />
       <Skills />

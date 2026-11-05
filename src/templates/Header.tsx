@@ -3,13 +3,14 @@ import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 
 import { AppConfig } from '@/utils/AppConfig';
-import { waLink } from '@/utils/whatsapp';
+import { WA_NUMBER, waLink } from '@/utils/whatsapp';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { SocialMedia } from '@/templates/SocialMedia';
 
 const links = [
   ['Tentang', '#about'],
   ['Layanan', '#layanan'],
+  ['Rate Card', '#rate-card'],
   ['Proyek', '#proyek'],
   ['Pengalaman', '#pengalaman'],
   ['Studi Kasus', '#studi-kasus'],
@@ -45,7 +46,7 @@ const Header = () => {
           </nav> */}
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <a href={AppConfig.studio.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary hidden sm:inline-flex">Pesan via {AppConfig.studio.name}</a>
+            <a href={waLink()} target="_blank" rel="noopener noreferrer" className="btn btn-primary hidden sm:inline-flex">Konsultasi gratis</a>
             <button type="button" data-cursor="Menu" onClick={() => setOpen(true)} aria-expanded={open} aria-controls="menu" className="btn btn-ghost gap-2">
               Menu
               <span aria-hidden="true" className="flex flex-col gap-[3px]"><i className="block h-px w-4 bg-current" /><i className="block h-px w-3 bg-current" /></span>
@@ -83,7 +84,7 @@ const Header = () => {
                 </ul>
               </nav>
               <div className="flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6 text-sm text-muted">
-                <a href={waLink()} target="_blank" rel="noopener noreferrer" className="hover:text-accent">WhatsApp: +62 813-8507-9843</a>
+                <a href={waLink()} target="_blank" rel="noopener noreferrer" className="hover:text-accent">WhatsApp: {WA_NUMBER}</a>
                 <SocialMedia childClass="flex gap-5" />
               </div>
             </div>
